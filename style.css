@@ -1,0 +1,30 @@
+pre{
+    font-family: Oswald;
+    font-size: 20px;
+}
+a:hover{
+        color: rgb(42, 42, 129);
+        font-size: 20px;
+}
+.pagination{
+    text-align: center;
+}
+.pagination a{
+    color: black;
+    text-decoration: none;
+    padding: 8px 15px;
+    display: inline-block;
+    height: 100;
+}
+.pagination a.active{
+    background-color: aquamarine;
+    font-weight: bolder;
+    border-radius: 5px;
+}
+.pagination a:hover:not(.active){
+    background-color: rgb(156, 151, 151);
+    font-weight: bolder;
+    border-radius: 5px;
+}
+
+    

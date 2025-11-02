@@ -1,0 +1,312 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Canon EOS R6 Mark II",
+      "category": "camera",
+      "price": 2499.99,
+      "description": "Professional mirrorless camera with 24.2MP full-frame sensor, perfect for YouTube content creation",
+      "image": "cannon1.jpg",
+      "stock": 15,
+      "rating": 4.8,
+      "features": ["24.2MP Full-Frame", "4K 60fps Video", "Dual Pixel AF"]
+    },
+    {
+      "id": 2,
+      "name": "Canon EOS 90D",
+      "category": "camera",
+      "price": 1199.99,
+      "description": "Versatile DSLR camera with excellent video capabilities and fast autofocus",
+      "image": "cannon2.jpg",
+      "stock": 20,
+      "rating": 4.6,
+      "features": ["32.5MP APS-C", "4K 30fps", "10fps Continuous"]
+    },
+    {
+      "id": 3,
+      "name": "Canon PowerShot G7 X Mark III",
+      "category": "camera",
+      "price": 749.99,
+      "description": "Compact vlogging camera with flip screen and 4K video recording",
+      "image": "cannon3.jpg",
+      "stock": 25,
+      "rating": 4.5,
+      "features": ["20.1MP 1-inch Sensor", "4K Video", "Live Streaming"]
+    },
+    {
+      "id": 4,
+      "name": "Sony Alpha a7 IV",
+      "category": "camera",
+      "price": 2498.00,
+      "description": "Hybrid full-frame camera ideal for both photography and videography",
+      "image": "sony1.jpg",
+      "stock": 12,
+      "rating": 4.9,
+      "features": ["33MP Full-Frame", "4K 60fps", "Real-time Eye AF"]
+    },
+    {
+      "id": 5,
+      "name": "Sony ZV-E10",
+      "category": "camera",
+      "price": 698.00,
+      "description": "Vlogging camera designed specifically for content creators",
+      "image": "sony2.jpg",
+      "stock": 30,
+      "rating": 4.7,
+      "features": ["24.2MP APS-C", "Product Showcase", "Directional Mic"]
+    },
+    {
+      "id": 6,
+      "name": "Nikon Z6 II",
+      "category": "camera",
+      "price": 1996.95,
+      "description": "Full-frame mirrorless camera with dual processors for enhanced performance",
+      "image": "nikkon1a.jpg",
+      "stock": 18,
+      "rating": 4.7,
+      "features": ["24.5MP Full-Frame", "4K UHD", "Dual EXPEED 6"]
+    },
+    {
+      "id": 7,
+      "name": "Blue Yeti USB Microphone",
+      "category": "microphone",
+      "price": 129.99,
+      "description": "Professional USB microphone with multiple pickup patterns for versatile recording",
+      "image": "microphoneWW1.jpg",
+      "stock": 50,
+      "rating": 4.6,
+      "features": ["4 Pickup Patterns", "Studio Quality", "Plug & Play"]
+    },
+    {
+      "id": 8,
+      "name": "Shure SM7B",
+      "category": "microphone",
+      "price": 399.00,
+      "description": "Legendary dynamic microphone used by top podcasters and YouTubers",
+      "image": "microphhoneWW2.jpg",
+      "stock": 35,
+      "rating": 4.9,
+      "features": ["Dynamic Cardioid", "Broadcast Quality", "Pop Filter"]
+    },
+    {
+      "id": 9,
+      "name": "Rode NT-USB Mini",
+      "category": "microphone",
+      "price": 99.00,
+      "description": "Compact USB microphone perfect for desktop recording and streaming",
+      "image": "MicrophoneWW3.jpg",
+      "stock": 45,
+      "rating": 4.5,
+      "features": ["Studio Quality", "Magnetic Stand", "Pop Filter"]
+    },
+    {
+      "id": 10,
+      "name": "Audio-Technica AT2020USB+",
+      "category": "microphone",
+      "price": 149.00,
+      "description": "Cardioid condenser USB microphone with excellent sound quality",
+      "image": "microphoneWW4.jpg",
+      "stock": 40,
+      "rating": 4.7,
+      "features": ["Cardioid Pattern", "Headphone Jack", "Mix Control"]
+    },
+    {
+      "id": 11,
+      "name": "HyperX QuadCast S",
+      "category": "microphone",
+      "price": 159.99,
+      "description": "RGB USB microphone with anti-vibration shock mount",
+      "image": "MicroW1.jpg",
+      "stock": 38,
+      "rating": 4.6,
+      "features": ["RGB Lighting", "4 Polar Patterns", "Tap-to-Mute"]
+    },
+    {
+      "id": 12,
+      "name": "Elgato Wave:3",
+      "category": "microphone",
+      "price": 149.99,
+      "description": "Premium USB condenser microphone with Wave Link software",
+      "image": "MicroW2.jpg",
+      "stock": 32,
+      "rating": 4.8,
+      "features": ["Cardioid Condenser", "Clipguard Technology", "Wave Link"]
+    },
+    {
+      "id": 13,
+      "name": "Neewer 18-inch Ring Light",
+      "category": "lighting",
+      "price": 79.99,
+      "description": "Dimmable LED ring light with adjustable color temperature",
+      "image": "ring.jpg",
+      "stock": 60,
+      "rating": 4.4,
+      "features": ["18-inch Diameter", "Dimmable", "3200K-5600K"]
+    },
+    {
+      "id": 14,
+      "name": "Elgato Key Light",
+      "category": "lighting",
+      "price": 199.99,
+      "description": "Professional LED panel light with WiFi control",
+      "image": "ring2.jpg",
+      "stock": 28,
+      "rating": 4.7,
+      "features": ["2800 Lumens", "WiFi Control", "Edge-lit LED"]
+    },
+    {
+      "id": 15,
+      "name": "GVM RGB LED Panel Light",
+      "category": "lighting",
+      "price": 139.99,
+      "description": "RGB video light with app control and multiple effects",
+      "image": "ring3.jpg",
+      "stock": 35,
+      "rating": 4.5,
+      "features": ["RGB Colors", "App Control", "CRI 97+"]
+    },
+    {
+      "id": 16,
+      "name": "Neewer Softbox Lighting Kit",
+      "category": "lighting",
+      "price": 109.99,
+      "description": "Complete softbox lighting kit with stands and bulbs",
+      "image": "soft1.jpg",
+      "stock": 42,
+      "rating": 4.6,
+      "features": ["2x Softboxes", "Light Stands", "85W Bulbs"]
+    },
+    {
+      "id": 17,
+      "name": "Godox SL-60W LED Light",
+      "category": "lighting",
+      "price": 119.00,
+      "description": "Powerful LED video light with Bowens mount",
+      "image": "soft2.jpg",
+      "stock": 25,
+      "rating": 4.8,
+      "features": ["60W Output", "5600K", "Bowens Mount"]
+    },
+    {
+      "id": 18,
+      "name": "Aputure AL-MC",
+      "category": "lighting",
+      "price": 89.00,
+      "description": "Pocket-sized RGB LED light with magnetic back",
+      "image": "soft3.jpg",
+      "stock": 55,
+      "rating": 4.7,
+      "features": ["RGB & CCT", "Magnetic", "Rechargeable"]
+    },
+    {
+      "id": 19,
+      "name": "Manfrotto Compact Action Tripod",
+      "category": "tripod",
+      "price": 64.99,
+      "description": "Lightweight aluminum tripod with joystick head",
+      "image": "tri.jpg",
+      "stock": 48,
+      "rating": 4.5,
+      "features": ["Aluminum Build", "61-inch Height", "Joystick Head"]
+    },
+    {
+      "id": 20,
+      "name": "Joby GorillaPod 3K Kit",
+      "category": "tripod",
+      "price": 79.95,
+      "description": "Flexible tripod with ball head for creative angles",
+      "image": "tri2.jpg",
+      "stock": 52,
+      "rating": 4.6,
+      "features": ["Flexible Legs", "3kg Capacity", "Ball Head"]
+    },
+    {
+      "id": 21,
+      "name": "Vanguard Alta Pro 263AB",
+      "category": "tripod",
+      "price": 179.99,
+      "description": "Professional tripod with multi-angle center column",
+      "image": "tri3.jpg",
+      "stock": 22,
+      "rating": 4.8,
+      "features": ["Multi-Angle Column", "Ball Head", "15.5 lbs Load"]
+    },
+    {
+      "id": 22,
+      "name": "Elgato Green Screen",
+      "category": "backdrop",
+      "price": 159.99,
+      "description": "Collapsible chroma key panel for professional backgrounds",
+      "image": "pexels-regeci-12591790.jpg",
+      "stock": 30,
+      "rating": 4.7,
+      "features": ["Collapsible", "Wrinkle-Resistant", "Auto-Locking"]
+    },
+    {
+      "id": 23,
+      "name": "Neewer Photo Studio Backdrop",
+      "category": "backdrop",
+      "price": 29.99,
+      "description": "Muslin backdrop with support stand system",
+      "image": "pan1.jpg",
+      "stock": 45,
+      "rating": 4.4,
+      "features": ["6x9ft Size", "Washable", "Stand Included"]
+    },
+    {
+      "id": 24,
+      "name": "Laptop Stand Adjustable",
+      "category": "accessories",
+      "price": 39.99,
+      "description": "Ergonomic aluminum laptop stand for better viewing angles",
+      "image": "lap1.jpg",
+      "stock": 65,
+      "rating": 4.5,
+      "features": ["Adjustable Height", "Aluminum", "Heat Dissipation"]
+    },
+    {
+      "id": 25,
+      "name": "Portable Laptop Desk",
+      "category": "accessories",
+      "price": 49.99,
+      "description": "Foldable laptop table with cooling fan",
+      "image": "lap2.jpg",
+      "stock": 58,
+      "rating": 4.3,
+      "features": ["Foldable", "Cooling Fan", "Mouse Pad"]
+    },
+    {
+      "id": 26,
+      "name": "Smartphone Holder Pro",
+      "category": "accessories",
+      "price": 24.99,
+      "description": "Universal phone mount for tripods and stands",
+      "image": "SP1.jpg",
+      "stock": 75,
+      "rating": 4.6,
+      "features": ["Universal Fit", "360° Rotation", "Cold Shoe Mount"]
+    },
+    {
+      "id": 27,
+      "name": "Camera Shoulder Rig",
+      "category": "accessories",
+      "price": 89.99,
+      "description": "Professional shoulder mount for stable handheld shooting",
+      "image": "SP2.jpg",
+      "stock": 28,
+      "rating": 4.7,
+      "features": ["Padded Shoulder", "15mm Rods", "Adjustable"]
+    },
+    {
+      "id": 28,
+      "name": "Wireless Lavalier Microphone",
+      "category": "microphone",
+      "price": 69.99,
+      "description": "Clip-on wireless mic system for interviews and vlogs",
+      "image": "MicroW3.jpg",
+      "stock": 42,
+      "rating": 4.5,
+      "features": ["Wireless", "50m Range", "6-Hour Battery"]
+    }
+  ]
+}

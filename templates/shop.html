@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumlens - YouTube Video Equipment Store</title>
+    <link rel="icon" type="image/png" href="../Lumlens logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/shop.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="../Lumlens logo.png" alt="Lumlens Logo" class="logo-img">
+                    <h1>Lumlens</h1>
+                </div>
+                <nav class="nav">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#products" class="nav-link">Products</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#orders" class="nav-link">Orders</a>
+                </nav>
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="Search products..." class="search-input">
+                        <button class="search-btn" onclick="searchProducts()">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <button class="cart-btn" onclick="toggleCart()">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">Elevate Your YouTube Game</h2>
+                <p class="hero-subtitle">Professional equipment for content creators</p>
+                <button class="cta-btn" onclick="scrollToProducts()">Shop Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters Section -->
+    <section class="filters" id="products">
+        <div class="container">
+            <div class="filters-content">
+                <div class="filter-group">
+                    <label>Category:</label>
+                    <select id="categoryFilter" onchange="filterProducts()">
+                        <option value="all">All Categories</option>
+                        <option value="camera">Cameras</option>
+                        <option value="microphone">Microphones</option>
+                        <option value="lighting">Lighting</option>
+                        <option value="tripod">Tripods</option>
+                        <option value="backdrop">Backdrops</option>
+                        <option value="accessories">Accessories</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Sort By:</label>
+                    <select id="sortFilter" onchange="filterProducts()">
+                        <option value="name">Name</option>
+                        <option value="price_low">Price: Low to High</option>
+                        <option value="price_high">Price: High to Low</option>
+                        <option value="rating">Rating</option>
+                    </select>
+                </div>
+                <div class="results-count">
+                    <span id="resultsCount">0 products</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products">
+        <div class="container">
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded here dynamically -->
+            </div>
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Loading products...</p>
+            </div>
+            <div class="no-results" id="noResults" style="display: none;">
+                <p>No products found. Try adjusting your filters.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="close-btn" onclick="toggleCart()">×</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be loaded here -->
+        </div>
+        <div class="cart-empty" id="cartEmpty">
+            <p>Your cart is empty</p>
+        </div>
+        <div class="cart-footer" id="cartFooter">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="total-amount" id="cartTotal">$0.00</span>
+            </div>
+            <button class="checkout-btn" onclick="showCheckout()">Proceed to Checkout</button>
+            <button class="clear-cart-btn" onclick="clearCart()">Clear Cart</button>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal" id="checkoutModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Checkout</h3>
+                <button class="close-btn" onclick="closeCheckout()">×</button>
+            </div>
+            <form id="checkoutForm" onsubmit="placeOrder(event)">
+                <div class="form-section">
+                    <h4>Contact Information</h4>
+                    <div class="form-group">
+                        <label>Full Name *</label>
+                        <input type="text" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email *</label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone *</label>
+                        <input type="tel" name="phone" required>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h4>Shipping Address</h4>
+                    <div class="form-group">
+                        <label>Address *</label>
+                        <input type="text" name="address" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>City *</label>
+                            <input type="text" name="city" required>
+                        </div>
+                        <div class="form-group">
+                            <label>State *</label>
+                            <input type="text" name="state" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>ZIP Code *</label>
+                            <input type="text" name="zip_code" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Country *</label>
+                            <input type="text" name="country" required>
+                        </div>
+                    </div>
+                    <button type="button" class="location-btn" onclick="getLocation()">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        Use My Current Location
+                    </button>
+                    <div id="locationStatus" class="location-status"></div>
+                </div>
+
+                <div class="form-section">
+                    <h4>Payment Method</h4>
+                    <div class="payment-options">
+                        <label class="radio-label">
+                            <input type="radio" name="payment_method" value="cash_on_delivery" checked>
+                            <span>Cash on Delivery</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="payment_method" value="card">
+                            <span>Credit/Debit Card</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="payment_method" value="upi">
+                            <span>UPI</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="order-summary">
+                    <h4>Order Summary</h4>
+                    <div class="summary-items" id="summaryItems"></div>
+                    <div class="summary-total">
+                        <span>Total Amount:</span>
+                        <span class="total-amount" id="summaryTotal">$0.00</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Place Order</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Order Confirmation Modal -->
+    <div class="modal" id="confirmationModal">
+        <div class="modal-content confirmation">
+            <div class="success-icon">✓</div>
+            <h3>Order Placed Successfully!</h3>
+            <p>Your order ID: <strong id="orderIdDisplay"></strong></p>
+            <p>Thank you for shopping with Lumlens!</p>
+            <p>We'll send you a confirmation email shortly.</p>
+            <button class="submit-btn" onclick="closeConfirmation()">Continue Shopping</button>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay" onclick="closeAll()"></div>
+
+    <script src="/static/js/shop.js"></script>
+</body>
+</html>
